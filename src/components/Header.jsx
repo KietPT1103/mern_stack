@@ -40,11 +40,17 @@ const headerItem = [
 ];
 
 const NavItem = ({ item }) => {
+  const [dropDown, setDropDown] = useState(false);
+
   return (
     <li className="hover:scale-110 transform transition-all duration-300 group">
       {item.type === "dropdown" ? (
         <div className="relative group p-2">
-          <a className="px-3 py-2 flex items-center group-hover:text-green-dark" href={item.url}>
+          <button
+            onMouseEnter={() => setDropDown(true)}
+            onMouseLeave={() => setDropDown(false)}
+            className="px-3 py-2 flex items-center group-hover:text-green-dark"
+          >
             {item.name}
             <div>
               <svg
@@ -70,17 +76,31 @@ const NavItem = ({ item }) => {
                 </g>
               </svg>
             </div>
-          </a>
-          <ul className="hidden absolute group-hover:flex flex-col w-max group-hover:top-[4.5rem] border rounded-lg">
-            {item.items.map((item) => (
-              <li>
-                <a className="px-8 py-4 hover:text-green-dark inline-block w-full" href={item.url}>{item.name}</a>
+          </button>
+          <ul
+          onMouseEnter={() => setDropDown(true)}
+          onMouseLeave={() => setDropDown(false)}
+            className={`${
+              dropDown ? 'top-16 opacity-100 block' : 'top-12 hidden opacity-0'
+            } transition-all duration-300 ease-in-out overflow-hidden lg:absolute flex flex-col w-max lg:border lg:rounded-lg`}
+          >
+            {item.items.map((subItem) => (
+              <li key={subItem.url}>
+                <a
+                  className="px-8 py-4 hover:text-green-dark inline-block w-full"
+                  href={subItem.url}
+                >
+                  {subItem.name}
+                </a>
               </li>
             ))}
           </ul>
         </div>
       ) : (
-        <a className="px-3 py-2  flex items-center group-hover:text-green-dark" href={item.url}>
+        <a
+          className="px-3 py-2  flex items-center group-hover:text-green-dark"
+          href={item.url}
+        >
           {item.name}
         </a>
       )}
@@ -99,7 +119,7 @@ const Header = () => {
     <section>
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex z-50 items-center justify-between w-full bg-white px-5 py-2">
-          <img src={images.Logo} alt="logo" className="min-w-20" width={80} />
+          <a href="/"><img src={images.Logo} alt="logo" className="min-w-20" width={80} /></a>
 
           <div className="lg:hidden">
             {headeActive ? (
@@ -174,7 +194,7 @@ const Header = () => {
         <div
           className={`${
             headeActive ? "right-0" : "-right-full"
-          } transition-all duration-300 bg-primary lg:bg-inherit w-full fixed lg:static right-0 top-0 bottom-0 flex flex-col lg:flex-row gap-12 text-3xl items-center justify-center`}
+          } transition-all duration-300 bg-primary lg:bg-inherit w-full fixed lg:static top-0 bottom-0 flex flex-col lg:flex-row gap-12 text-3xl items-center justify-center`}
         >
           <ul className="flex flex-col lg:flex-row gap-10 lg:gap-4 text-3xl items-center font-semibold text-white lg:text-inherit">
             {headerItem.map((item) => (

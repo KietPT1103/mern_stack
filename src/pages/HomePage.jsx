@@ -1,9 +1,12 @@
 import React from 'react'
 import MainLayout from '../components/MainLayout'
+import Hero from './home/container/Hero'
 
 function HomePage() {
   return (
-    <MainLayout></MainLayout>
+    <MainLayout>
+      <Hero/>
+    </MainLayout>
   )
 }
 
