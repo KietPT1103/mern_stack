@@ -1,12 +1,16 @@
-import React, { Fragment } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { routes } from './routes/routes'
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
+import ArticleDetail from './pages/articleDetail/ArticleDetail'
 function App() {
 
   return (
     <div className='font-opensans'>
-      <HomePage/>
+      <Routes>
+        <Route index path='*' element={<HomePage/>}/>
+        <Route index path='/' element={<HomePage/>}/>
+        <Route index path='/blog/:id' element={<ArticleDetail/>}/>
+      </Routes>
     </div>
   )
 }

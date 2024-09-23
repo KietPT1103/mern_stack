@@ -1,6 +1,7 @@
 // IMAGE
 import Logo from "../assets/images/icon.png"
 import Hero from "../assets/images/hero.jpg"
+import Banner from "../assets/images/banner.jpg"
 
 // CARD IMAGE
 import mavuika from "../assets/images/card/mavuika.jpg"
@@ -12,6 +13,7 @@ import natlan_charracter from "../assets/images/card/natlan_charracter.jpg"
 const images = {
     Logo,
     Hero,
+    Banner,
     mavuika,
     mualani,
     batman,

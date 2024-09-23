@@ -3,7 +3,7 @@ import images from '../constansts/images'
 
 function ArticleCard({className}) {
   return (
-    <div className={`rounded-xl w-[85%] mx-auto overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] ${className}`}>
+    <div className={`rounded-xl mx-auto overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] ${className}`}>
       <img src={images.xilonen} className='w-full object-center h-auto' alt="demo" />
       <div className='mt-5 font-roboto p-8'>
           <h2 className=' font-bold text-3xl md:text-4xl line-clamp-2'>
