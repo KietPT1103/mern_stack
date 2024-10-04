@@ -82,10 +82,10 @@ const NavItem = ({ item }) => {
           onMouseLeave={() => setDropDown(false)}
             className={`${
               dropDown ? 'top-16 opacity-100 block' : 'top-12 hidden opacity-0'
-            } transition-all duration-300 ease-in-out overflow-hidden lg:absolute flex flex-col w-max lg:border lg:rounded-lg`}
+            } transition-all duration-300 ease-in-out overflow-hidden lg:absolute flex flex-col w-max lg:border lg:rounded-lg bg-white`}
           >
             {item.items.map((subItem) => (
-              <li key={subItem.url}>
+              <li key={subItem.url} className="hover:bg-gray-100">
                 <a
                   className="px-8 py-4 hover:text-green-dark inline-block w-full"
                   href={subItem.url}

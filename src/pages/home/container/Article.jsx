@@ -5,12 +5,12 @@ function Article() {
   return (
     <section className=" lg:px-48 mt-12 text-xl py-12 mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 lg:gap-y-28">
-        <ArticleCard className="w-full lg:w-[calc(90%-20px)]" />
-        <ArticleCard className="w-full lg:w-[calc(90%-20px)]" />
-        <ArticleCard className="w-full lg:w-[calc(90%-20px)]" />
-        <ArticleCard className="w-full lg:w-[calc(90%-20px)]" />
-        <ArticleCard className="w-full lg:w-[calc(90%-20px)]" />
-        <ArticleCard className="w-full lg:w-[calc(90%-20px)]" />
+        <ArticleCard className="w-[80%] lg:w-[calc(80%-20px)]" />
+        <ArticleCard className="w-[80%] lg:w-[calc(80%-20px)]" />
+        <ArticleCard className="w-[80%] lg:w-[calc(80%-20px)]" />
+        <ArticleCard className="w-[80%] lg:w-[calc(80%-20px)]" />
+        <ArticleCard className="w-[80%] lg:w-[calc(80%-20px)]" />
+        <ArticleCard className="w-[80%] lg:w-[calc(80%-20px)]" />
       </div>
       <div className="mt-12">
         <button className="text-blue-500 text-3xl flex items-center mx-auto justify-center hover:scale-105 transition-all border-2 border-blue-500 px-4 py-3 rounded-lg">
@@ -21,17 +21,17 @@ function Article() {
               height="24px"
               viewBox="0 0 1024 1024"
               fill="#3b82f6"
-              class="icon"
+              className="icon"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
               stroke="#3b82f6"
-              stroke-width="90"
+              strokeWidth="90"
             >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
               <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></g>
               <g id="SVGRepo_iconCarrier">
                 <path

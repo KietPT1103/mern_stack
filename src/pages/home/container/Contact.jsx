@@ -9,7 +9,7 @@ function Contact() {
         </h1>
         <div className='flex flex-col mx-auto w-[500px] mt-5'>
             <input type="text" placeholder='Your email'  className='p-6 text-3xl rounded-lg focus:outline-blue-500'/>
-            <button className='w-full p-5 text-3xl bg-green-dark mt-6 rounded-lg hover:text-second'>
+            <button className='w-full p-5 text-3xl bg-green-dark mt-6 rounded-lg hover:text-second text-white'>
                 Get started
             </button>
         </div>

@@ -4,6 +4,7 @@ import BreadCrumbs from "../../components/BreadCrumbs";
 import { images } from "../../constansts";
 import { Link } from "react-router-dom";
 import SuggestedArticle from "./container/SuggestedArticle";
+import CommentContainer from "../../components/comments/CommentContainer";
 
 const breadCrumbsData = [
   { name: "Home", link: "/" },
@@ -55,7 +56,7 @@ function ArticleDetail() {
           <h1 className="text-5xl font-bold font-roboto my-10 text-green-700">
             New character in natlan, Xilonen!
           </h1>
-          <p className="leading-7 text-xl">
+          <p className="leading-7 text-3xl">
             ehehehehe ehehehehe ehehehehe ehehehehe ehehehehe ehehehehe
             ehehehehe ehehehehe ehehehehe ehehehehe ehehehehe ehehehehe
             ehehehehe ehehehehe ehehehehe ehehehehe ehehehehe ehehehehe
@@ -64,6 +65,7 @@ function ArticleDetail() {
             ehehehehe ehehehehe ehehehehe ehehehehe ehehehehe ehehehehe
             ehehehehe ehehehehe ehehehehe{" "}
           </p>
+          <CommentContainer className="mt-12" loggedUserId="0"/>
         </article>
         <SuggestedArticle header={"Lastest Articles"} posts={postsData}/>
       </div>

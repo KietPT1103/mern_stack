@@ -4,12 +4,12 @@ import images from '../constansts/images'
 function ArticleCard({className}) {
   return (
     <div className={`rounded-xl mx-auto overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] ${className}`}>
-      <img src={images.xilonen} className='w-full object-center h-auto' alt="demo" />
-      <div className='mt-5 font-roboto p-8'>
-          <h2 className=' font-bold text-3xl md:text-4xl line-clamp-2'>
+      <img src={images.xilonen} className='w-full object-center h-auto cursor-pointer' alt="demo" />
+      <div className='mt-5 font-roboto p-8 '>
+          <h2 className=' font-bold text-3xl md:text-4xl line-clamp-2 cursor-pointer'>
             Title
           </h2>
-          <p className=' text-2xl md:text-3xl mt-2 line-clamp-2'>
+          <p className=' text-2xl md:text-3xl mt-4 line-clamp-2'>
             Description
           </p>
           <div className='flex justify-between flex-nowrap items-center mt-8'>
